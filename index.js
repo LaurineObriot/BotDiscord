@@ -14,12 +14,7 @@ bot.on('guildMemberAdd', function (member) {
 })
 
 bot.on('message', function (message) {
-	if (Google.match(message)) {
-		return Google.action(message)
-	}
-	if (message.content === '!ping') {
-		message.channel.send('pong')
-	}
+	Google.parse(message)
 })
 
 bot.login('NjY5MTA4MDU1NDI5ODczNjY0.XibBlg.ZNQUN-VSvtVt2e6gVHUDuVSJ7xs')
