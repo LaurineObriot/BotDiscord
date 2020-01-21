@@ -7,7 +7,7 @@ module.exports = class Play extends Command {
 	}
 
 	static action (message) {
-		message.reply('')
+		console.log(message.guild.channels.array())
 	}
 
 }
