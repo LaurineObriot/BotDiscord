@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.client()
 const Google = require('./commands/google')
+const Ping = require('./commands/ping')
 
 bot.on('ready', function () {
 	// bot.user.setAvatar('./avatar.jpg').catch(console.error)
@@ -14,7 +15,7 @@ bot.on('guildMemberAdd', function (member) {
 })
 
 bot.on('message', function (message) {
-	Google.parse(message)
+	let commandUsed = Ping.parse(message) || Google.parse(message)
 })
 
 bot.login('NjY5MTA4MDU1NDI5ODczNjY0.XibBlg.ZNQUN-VSvtVt2e6gVHUDuVSJ7xs')
